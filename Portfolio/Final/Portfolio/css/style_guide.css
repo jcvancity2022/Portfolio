@@ -1,0 +1,140 @@
+/* Color Scheme */
+:root {
+    --primary-color: #5B62BE; /* A modern and vibrant primary color */
+    --secondary-color: #FFFFFF; /* Secondary color for contrast */
+    --accent-color: #FFC107; /* An accent color that stands out */
+    --text-color: #333333; /* Dark color for readable text */
+    --background-light: #F7F7F7; /* Light background for certain sections */
+}
+
+/* Typography */
+body, button, input, textarea {
+    font-family: 'Helvetica', 'Arial', sans-serif; /* Clean, sans-serif font */
+    color: var(#0051ff);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif; /* Serif font for headings to add character */
+    color: var(--primary-color);
+}
+
+/* Layout & Design */
+header {
+    background-color: var(#0051ff);
+    color: var(#0051ff);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+#logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#nav-links {
+    list-style-type: none;
+}
+
+#nav-links li {
+    display: inline;
+    margin-right: 2rem;
+}
+
+#nav-links li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#nav-links li a:hover {
+    color: var(--accent-color);
+}
+
+#theme-switcher {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#theme-switcher:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: var(--background-light);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    #nav-links li {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Dark mode styles */
+.dark-mode {
+    --primary-color: #FFFFFF; /* Invert primary color */
+    --secondary-color: #5B62BE; /* Invert secondary color */
+    --text-color: #F7F7F7; /* Light text for dark background */
+    --background-light: #333333; /* Dark background for sections */
+}
+
+.dark-mode header {
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+.dark-mode #nav-links li a {
+    color: var(--text-color);
+}
+
+.dark-mode #theme-switcher {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.dark-mode footer {
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
